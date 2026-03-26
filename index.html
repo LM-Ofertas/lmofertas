@@ -3,174 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L&M Ofertas - Promoção Exclusiva</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <title>L&M Ofertas - Kit Cozinha Premium Rosa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Estilo focado em Conversão (ADS) */
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #333;
+      /* Animação para o botão do WhatsApp pulsar e chamar atenção */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+        }
       }
-      .header {
-        background-color: #fff;
-        width: 100%;
-        padding: 15px 0;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .logo {
-        font-weight: bold;
-        color: #e91e63;
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      .container {
-        max-width: 450px;
-        width: 90%;
-        background: #fff;
-        margin-top: 20px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        padding-bottom: 30px;
-      }
-      .product-img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .content {
-        padding: 20px;
-        text-align: center;
-      }
-      .badge {
-        background: #ffeb3b;
-        color: #000;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-weight: bold;
-        font-size: 14px;
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-      h1 {
-        font-size: 20px;
-        margin: 10px 0;
-        color: #222;
-      }
-      .price {
-        font-size: 28px;
-        color: #2e7d32;
-        font-weight: bold;
-        margin: 15px 0;
-      }
-      .old-price {
-        text-decoration: line-through;
-        color: #888;
-        font-size: 16px;
-      }
-
-      /* Botão Principal - Call to Action */
-      .btn-buy {
-        background-color: #e91e63;
-        color: white;
-        text-decoration: none;
-        padding: 18px 30px;
-        border-radius: 50px;
-        font-weight: bold;
-        font-size: 18px;
-        display: block;
-        margin: 20px 0;
-        transition: 0.3s;
-        box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
-      }
-      .btn-buy:hover {
-        transform: scale(1.05);
-        background-color: #c2185b;
-      }
-
-      .shipping {
-        color: #2e7d32;
-        font-weight: bold;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-      }
-
-      /* Botão WhatsApp Flutuante */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        z-index: 100;
-        text-decoration: none;
+      .btn-whats-pulse {
+        animation: pulse 2s infinite;
       }
     </style>
   </head>
-  <body>
-    <div class="header">
-      <div class="logo">L&M Ofertas</div>
-    </div>
+  <body class="bg-gray-100 font-sans text-gray-900 leading-tight">
+    <header class="bg-white shadow-md py-4 text-center sticky top-0 z-50">
+      <h1 class="text-2xl font-black text-pink-600 tracking-tighter">
+        L&M OFERTAS 🛍️
+      </h1>
+      <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
+        Achadinhos de Recife & Região
+      </p>
+    </header>
 
-    <div class="container">
-      <img
-        src="https://http2.mlstatic.com/D_NQ_NP_2X_965881-MLU77620603539_072024-F.webp"
-        alt="Produto"
-        class="product-img"
-      />
+    <main class="max-w-md mx-auto p-4 pb-20">
+      <div
+        class="bg-white rounded-3xl shadow-xl overflow-hidden mb-6 border border-gray-100"
+      >
+        <img
+          src="https://http2.mlstatic.com/D_NQ_NP_2X_624738-MLA96118106151_102025-F.webp"
+          alt="Kit Cozinha 19 Peças"
+          class="w-full h-auto"
+        />
 
-      <div class="content">
-        <div class="badge">🔥 OFERTA POR TEMPO LIMITADO</div>
-        <h1>Kit Premium 19 Peças Cozinha Silicone</h1>
+        <div class="p-5">
+          <div class="flex justify-between items-start mb-2">
+            <span
+              class="bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded-lg uppercase"
+              >Estoque em Pernambuco 🚚</span
+            >
+            <span class="text-orange-500 font-bold text-xs"
+              >⭐ 4.9 (127 avaliações)</span
+            >
+          </div>
 
-        <p class="old-price">De: R$ 120,00</p>
-        <p class="price">Por apenas: R$ 70,00</p>
+          <h2 class="text-xl font-extrabold text-gray-800">
+            Kit Cozinha 19 Peças - Silicone Premium
+          </h2>
 
-        <div class="shipping">
-          <i class="fas fa-truck"></i> Frete Grátis para Recife e Região!
+          <div
+            class="mt-4 p-3 bg-gray-50 rounded-xl border border-dashed border-gray-300 text-center"
+          >
+            <p class="text-gray-400 line-through text-sm italic">
+              De: R$ 120,00
+            </p>
+            <p class="text-3xl font-black text-green-600">Por: R$ 67,99</p>
+            <p class="text-[10px] text-gray-500 font-bold mt-1 uppercase">
+              💳 Parcelamento disponível no site oficial
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-orange-50 border-l-4 border-orange-400 p-4 mb-8 rounded-r-xl"
+      >
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🔥</span>
+          <p class="text-sm text-orange-800 font-medium">
+            <span class="font-black text-orange-600">14 pessoas de Recife</span>
+            estão visualizando agora. <br />
+            <span class="underline"
+              >Estoque limitado no valor promocional!</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <a
+          href="https://meli.la/2WYR2aB"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-black py-5 px-4 rounded-2xl text-center text-lg shadow-2xl transition-all transform active:scale-95 uppercase"
+        >
+          🛒 COMPRAR COM DESCONTO AGORA
+        </a>
+
+        <div class="flex items-center my-2">
+          <hr class="flex-grow border-gray-300" />
+          <span
+            class="px-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest italic"
+            >Ainda tem dúvidas?</span
+          >
+          <hr class="flex-grow border-gray-300" />
         </div>
 
-        <a href="https://meli.la/2WYR2aB" class="btn-buy"
-          >GARANTIR COM DESCONTO <i class="fas fa-arrow-right"></i
-        ></a>
+        <a
+          href="https://whatsapp.com/channel/0029VbCPxWB9xVJmh7zaXZ2c"
+          class="btn-whats-pulse bg-green-500 hover:bg-green-600 text-white font-black py-4 px-4 rounded-2xl text-center flex items-center justify-center gap-3 shadow-lg transition-all transform active:scale-95"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            class="w-6 h-6"
+            alt="WhatsApp"
+          />
+          ENTRAR NO GRUPO VIP (CUPONS)
+        </a>
 
-        <p style="font-size: 12px; color: #888">
-          Compra 100% Segura via Mercado Livre / Shopee
+        <p class="text-[9px] text-center text-gray-400 px-6 mt-2 leading-tight">
+          *A L&M Ofertas seleciona os melhores achadinhos. A finalização da
+          compra é feita em ambiente seguro via Marketplace Oficial.
         </p>
       </div>
-    </div>
+    </main>
 
-    <a
-      href="https://whatsapp.com/channel/0029VbCPxWB9xVJmh7zaXZ2c"
-      class="whatsapp-float"
-      target="_blank"
-      title="Entrar no Grupo VIP"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </a>
+    <footer class="bg-white py-8 border-t border-gray-200 text-center">
+      <div class="flex justify-center gap-4 mb-4 opacity-50 grayscale">
+        <img
+          src="https://logodownload.org/wp-content/uploads/2016/08/mercado-livre-logo-0-1.png"
+          class="h-4"
+          alt="Mercado Livre"
+        />
+        <img
+          src="https://logodownload.org/wp-content/uploads/2021/03/shopee-logo-0.png"
+          class="h-4"
+          alt="Shopee"
+        />
+      </div>
+      <p class="text-[10px] text-gray-400 px-10">
+        L&M Ofertas<br />
+        Recife/PE - 2026. Todos os direitos reservados.
+      </p>
+    </footer>
   </body>
 </html>
