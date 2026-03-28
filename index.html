@@ -3,146 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L&M Ofertas - Kit Cozinha Premium Rosa</title>
+    <title>L&M Ofertas - Kit Cozinha Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Animação para o botão do WhatsApp pulsar e chamar atenção */
-      @keyframes pulse {
+      @keyframes pulse-blue {
         0% {
           transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+          box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
         }
         70% {
-          transform: scale(1.05);
-          box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+          transform: scale(1.03);
+          box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
         }
         100% {
           transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+          box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
         }
       }
-      .btn-whats-pulse {
-        animation: pulse 2s infinite;
+      .btn-buy {
+        animation: pulse-blue 2s infinite;
       }
     </style>
   </head>
-  <body class="bg-gray-100 font-sans text-gray-900 leading-tight">
-    <header class="bg-white shadow-md py-4 text-center sticky top-0 z-50">
-      <h1 class="text-2xl font-black text-pink-600 tracking-tighter">
-        L&M OFERTAS 🛍️
+  <body class="bg-gray-50 font-sans text-gray-900 leading-tight">
+    <header class="bg-white py-4 text-center border-b">
+      <h1 class="text-xl font-black text-pink-600 tracking-tighter uppercase">
+        L&M Ofertas 🛍️
       </h1>
-      <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
-        Achadinhos de Recife & Região
-      </p>
     </header>
 
     <main class="max-w-md mx-auto p-4 pb-20">
       <div
-        class="bg-white rounded-3xl shadow-xl overflow-hidden mb-6 border border-gray-100"
+        class="bg-white rounded-3xl shadow-xl overflow-hidden mb-6 border border-gray-100 flex flex-col items-center"
       >
-        <img
-          src="https://http2.mlstatic.com/D_NQ_NP_2X_624738-MLA96118106151_102025-F.webp"
-          alt="Kit Cozinha 19 Peças"
-          class="w-full h-auto"
-        />
+        <div
+          class="w-full max-w-[280px] mt-4 aspect-square overflow-hidden rounded-2xl"
+        >
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_624738-MLA96118106151_102025-F.webp"
+            alt="Kit Cozinha 19 Peças"
+            class="w-full h-full"
+          />
+        </div>
 
-        <div class="p-5">
-          <div class="flex justify-between items-start mb-2">
+        <div class="p-6 text-center w-full">
+          <div class="flex justify-between items-center mb-4 gap-2">
             <span
-              class="bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded-lg uppercase"
-              >Em Estoque 🚚</span
+              class="bg-blue-100 text-blue-700 text-[10px] font-black px-3 py-1 rounded-full uppercase italic whitespace-nowrap"
+              >Vendido por Loja Oficial</span
             >
-            <span class="text-orange-500 font-bold text-xs"
-              >⭐ 4.6 (8.239 avaliações)</span
+            <span
+              class="text-green-600 font-bold text-sm italic whitespace-nowrap"
+              >✓ Em Estoque</span
             >
           </div>
 
-          <h2 class="text-xl font-extrabold text-gray-800">
-            Kit Cozinha 19 Peças - Silicone Premium
+          <h2
+            class="text-xl font-extrabold text-gray-800 tracking-tight leading-tight"
+          >
+            Kit Cozinha 19 Peças - Silicone Premium (Completo)
           </h2>
 
           <div
-            class="mt-4 p-3 bg-gray-50 rounded-xl border border-dashed border-gray-300 text-center"
+            class="mt-5 p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200 text-center"
           >
-            <p class="text-gray-400 line-through text-sm italic">
-              De: R$ 120,00
-            </p>
-            <p class="text-3xl font-black text-green-600">Por: R$ 67,99</p>
-            <p class="text-[10px] text-gray-500 font-bold mt-1 uppercase">
-              💳 Parcelamento disponível no site oficial
+            <p class="text-gray-400 line-through text-sm">De: R$ 67,99</p>
+            <p class="text-4xl font-black text-blue-600">R$ 62,99</p>
+            <p
+              class="text-[11px] text-gray-500 font-bold mt-2 uppercase tracking-wide italic"
+            >
+              🚚 Frete Grátis para Recife e Região
             </p>
           </div>
         </div>
       </div>
 
-      <div
-        class="bg-orange-50 border-l-4 border-orange-400 p-4 mb-8 rounded-r-xl"
-      >
-        <div class="flex items-center gap-3">
-          <span class="text-2xl">🔥</span>
-          <p class="text-sm text-orange-800 font-medium">
-            <span class="font-black text-orange-600">14 pessoas de Recife</span>
-            estão visualizando agora. <br />
-            <span class="underline"
-              >Estoque limitado no valor promocional!</span
-            >
-          </p>
-        </div>
+      <div class="flex items-center justify-center gap-4 mb-8 opacity-70">
+        <img
+          src="https://logodownload.org/wp-content/uploads/2016/08/mercado-livre-logo-0-1.png"
+          class="h-4"
+          alt="ML"
+        />
+        <span class="text-gray-300">|</span>
+        <p
+          class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none"
+        >
+          Compra 100% Segura
+        </p>
       </div>
 
-      <div class="flex flex-col gap-4">
+      <div class="px-2 text-center">
         <a
-          href="https://meli.la/2WYR2aB"
-          class="bg-blue-600 hover:bg-blue-700 text-white font-black py-5 px-4 rounded-2xl text-center text-lg shadow-2xl transition-all transform active:scale-95 uppercase"
+          href="SEU_LINK_DO_MERCADO_LIVRE_AQUI"
+          class="btn-buy bg-blue-600 hover:bg-blue-700 text-white font-black py-6 px-4 rounded-2xl text-center text-xl shadow-2xl transition-all block uppercase tracking-tighter"
         >
-          🛒 COMPRAR COM DESCONTO AGORA
+          🛒 COMPRAR NO MERCADO LIVRE
         </a>
 
-        <div class="flex items-center my-2">
-          <hr class="flex-grow border-gray-300" />
-          <span
-            class="px-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest italic"
-            >Ainda tem dúvidas?</span
-          >
-          <hr class="flex-grow border-gray-300" />
-        </div>
-
-        <a
-          href="https://whatsapp.com/channel/0029VbCPxWB9xVJmh7zaXZ2c"
-          class="btn-whats-pulse bg-green-500 hover:bg-green-600 text-white font-black py-4 px-4 rounded-2xl text-center flex items-center justify-center gap-3 shadow-lg transition-all transform active:scale-95"
+        <p
+          class="text-[10px] text-gray-400 mt-6 px-6 italic leading-relaxed text-center"
         >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            class="w-6 h-6"
-            alt="WhatsApp"
-          />
-          ENTRAR NO GRUPO VIP (CUPONS)
-        </a>
-
-        <p class="text-[9px] text-center text-gray-400 px-6 mt-2 leading-tight">
-          *A L&M Ofertas seleciona os melhores achadinhos. A finalização da
-          compra é feita em ambiente seguro via Marketplace Oficial.
+          *Você será redirecionado para a plataforma oficial do Mercado Livre
+          para finalizar seu pagamento com total segurança.
         </p>
       </div>
     </main>
 
-    <footer class="bg-white py-8 border-t border-gray-200 text-center">
-      <div class="flex justify-center gap-4 mb-4 opacity-50 grayscale">
-        <img
-          src="https://logodownload.org/wp-content/uploads/2016/08/mercado-livre-logo-0-1.png"
-          class="h-4"
-          alt="Mercado Livre"
-        />
-        <img
-          src="https://logodownload.org/wp-content/uploads/2021/03/shopee-logo-0.png"
-          class="h-4"
-          alt="Shopee"
-        />
-      </div>
-      <p class="text-[10px] text-gray-400 px-10">
-        L&M Ofertas<br />
-        Recife/PE - 2026. Todos os direitos reservados.
-      </p>
+    <footer
+      class="py-10 text-center text-[10px] text-gray-300 uppercase tracking-widest font-bold border-t mt-10"
+    >
+      L&M Ofertas - Recife/PE 2026
     </footer>
   </body>
 </html>
