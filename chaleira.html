@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercado Livre | Chaleira Inox 220V</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -28,126 +38,257 @@
       fbq("init", "576877975267309");
       fbq("track", "PageView");
     </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=576877975267309&ev=PageView&noscript=1"
-    /></noscript>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L&M Ofertas - Chaleira Elétrica Turquesa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-      @keyframes pulse-blue {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
-        }
-        70% {
-          transform: scale(1.03);
-          box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
-        }
-        100% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
-        }
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #ededed;
       }
-      .btn-buy {
-        animation: pulse-blue 2s infinite;
+      .ml-yellow {
+        background-color: #fff159;
+      }
+      .ml-blue {
+        background-color: #3483fa;
+      }
+      .ml-green {
+        color: #00a650;
+      }
+      .btn-ml:active {
+        transform: scale(0.98);
       }
     </style>
   </head>
-  <body class="bg-gray-50 font-sans text-gray-900 leading-tight">
-    <header class="bg-white py-4 text-center border-b">
-      <h1 class="text-xl font-black text-pink-600 tracking-tighter uppercase">
-        L&M Ofertas 🛍️
-      </h1>
+  <body class="min-h-screen">
+    <header
+      class="ml-yellow p-3 flex items-center justify-between shadow-sm sticky top-0 z-40"
+    >
+      <div class="flex items-center gap-3">
+        <svg
+          class="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+        <img
+          src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/logo__large_plus@2x.png"
+          class="h-7"
+        />
+      </div>
+      <div class="flex gap-4">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+        </svg>
+      </div>
     </header>
 
-    <main class="max-w-md mx-auto p-4 pb-20">
+    <div class="bg-white p-4 flex items-center gap-3 border-b">
       <div
-        class="bg-white rounded-3xl shadow-xl overflow-hidden mb-6 border border-gray-100 flex flex-col items-center"
+        class="w-10 h-10 rounded-full border flex items-center justify-center bg-gray-50 uppercase font-bold text-blue-500 text-xs text-center"
       >
-        <div
-          class="w-full max-w-[280px] h-[360px] mt-4 aspect-square overflow-hidden rounded-2xl"
-        >
+        LM
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold">L&M Ofertas</h2>
+        <p class="text-[10px] text-gray-500">0 seguidores</p>
+      </div>
+      <button class="ml-auto text-blue-500 font-bold text-sm">Seguir</button>
+    </div>
+
+    <main class="max-w-md mx-auto bg-white p-4 mt-2 shadow-sm rounded-lg">
+      <div class="flex gap-4">
+        <div class="w-1/3">
           <img
-            src="./img/chaleira2.png"
-            alt="Chaleira Elétrica Turquesa Inox 1.8L - Desliga Sozinha"
-            class="w-full h-full object-contain"
+            src="img/chaleira2.png"
+            alt="Chaleira Inox"
+            class="w-full rounded-md border shadow-sm"
           />
         </div>
 
-        <div class="p-6 text-center w-full">
-          <div class="flex justify-between items-center mb-4 gap-2">
-            <span
-              class="bg-blue-100 text-blue-700 text-[10px] font-black px-3 py-1 rounded-full uppercase italic whitespace-nowrap"
-              >Vendido por Loja Oficial</span
-            >
-            <span
-              class="text-green-600 font-bold text-sm italic whitespace-nowrap"
-              >✓ Em Estoque</span
-            >
+        <div class="w-2/3">
+          <span
+            class="bg-[#ff7733] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-sm uppercase"
+            >Mais Vendido</span
+          >
+          <h1 class="text-[13px] font-normal text-gray-800 mt-1 leading-tight">
+            Chaleira Elétrica Turquesa Inox 1.8L Desliga Automático 220V
+          </h1>
+
+          <div class="mt-2">
+            <span class="text-gray-400 line-through text-[11px]">R$ 58,89</span>
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-normal text-gray-900 leading-none"
+                >R$ 54<span class="text-sm align-top">89</span></span
+              >
+              <span class="ml-green text-[13px] font-semibold">20% OFF</span>
+            </div>
+            <div class="flex items-center gap-1 mt-1">
+              <span class="ml-green text-[12px] font-bold">Chegará amanhã</span>
+              <span
+                class="bg-[#00a650] text-white text-[9px] font-black px-1 rounded-sm flex items-center gap-0.5"
+              >
+                <svg class="w-2 h-2 fill-current" viewBox="0 0 24 24">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                FULL
+              </span>
+            </div>
           </div>
 
-          <h2
-            class="text-xl font-extrabold text-gray-800 tracking-tight leading-tight"
+          <a
+            href="https://meli.la/1gMXUCf"
+            onclick="
+              fbq('track', 'InitiateCheckout', { value: 64.9, currency: 'BRL' })
+            "
+            class="btn-ml ml-blue text-white text-center py-2.5 px-4 rounded-md text-sm font-bold block mt-4 transition-all"
           >
-            Chaleira Elétrica Turquesa Inox 1.8L - Desliga Sozinha
-          </h2>
-
-          <div
-            class="mt-5 p-4 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200 text-center"
-          >
-            <p class="text-gray-400 line-through text-sm">De: R$ 58,89</p>
-            <p class="text-4xl font-black text-blue-600">R$ 54,89</p>
-            <p
-              class="text-[11px] text-gray-500 font-bold mt-2 uppercase tracking-wide italic"
-            >
-              🚚 Frete Grátis para Recife e Região
-            </p>
-          </div>
+            Ir para produto
+          </a>
         </div>
       </div>
 
-      <div class="flex items-center justify-center gap-4 mb-8 opacity-70">
-        <img
-          src="https://logodownload.org/wp-content/uploads/2016/08/mercado-livre-logo-0-1.png"
-          class="h-[7rem]"
-          alt="ML"
-        />
-        <span class="text-gray-300">|</span>
-        <p
-          class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none"
+      <div class="mt-8 border-t pt-4">
+        <h3
+          class="text-sm font-semibold text-gray-800 mb-4 uppercase tracking-tighter"
         >
-          Compra 100% Segura
-        </p>
-      </div>
+          Quem viu este produto também comprou
+        </h3>
 
-      <div class="px-2 text-center">
-        <a
-          href="https://meli.la/1gMXUCf"
-          onclick="fbq('track', 'InitiateCheckout', {value: 54.89, currency: 'BRL'});"
-          class="btn-buy bg-blue-600 hover:bg-blue-700 text-white font-black py-6 px-4 rounded-2xl text-center text-xl shadow-2xl transition-all block uppercase tracking-tighter"
-        >
-          🛒 COMPRAR NO MERCADO LIVRE
-        </a>
+        <div class="grid grid-cols-2 gap-3">
+          <div
+            class="border rounded-lg p-2 bg-gray-50 flex flex-col justify-between shadow-sm"
+          >
+            <img
+              src="https://http2.mlstatic.com/D_NQ_NP_2X_624738-MLA96118106151_102025-F.webp"
+              class="h-24 w-full object-contain mx-auto"
+              alt="Kit Silicone"
+            />
+            <div class="mt-2">
+              <p
+                class="text-[10px] text-gray-600 leading-tight h-8 overflow-hidden"
+              >
+                Kit Utensílios Cozinha Silicone 19 Peças Premium
+              </p>
+              <div class="flex flex-col mt-1">
+                <span class="text-xs font-bold text-gray-900">R$ 62,99</span>
+                <span class="text-[9px] text-green-600 font-bold uppercase"
+                  >Frete Grátis</span
+                >
+              </div>
+            </div>
+            <a
+              href="https://lm-ofertas.github.io/lmofertas/"
+              class="mt-2 block w-full bg-blue-50 text-blue-600 text-center py-1.5 rounded text-[10px] font-bold border border-blue-200 active:bg-blue-100"
+            >
+              Ver detalhes
+            </a>
+          </div>
 
-        <p
-          class="text-[10px] text-gray-400 mt-6 px-6 italic leading-relaxed text-center"
-        >
-          *Você será redirecionado para a plataforma oficial do Mercado Livre
-          para finalizar seu pagamento com total segurança.
-        </p>
+          <div
+            class="border rounded-lg p-2 bg-gray-50 flex flex-col justify-between shadow-sm"
+          >
+            <img
+              src="https://http2.mlstatic.com/D_NQ_NP_2X_792412-MLB92652744189_092025-F.webp"
+              class="h-24 w-full object-contain mx-auto"
+              alt="Mixer Multiuso"
+            />
+            <div class="mt-2">
+              <p
+                class="text-[10px] text-gray-600 leading-tight h-8 overflow-hidden"
+              >
+                Mixer Multiuso Elétrico Portátil - Potência Extra
+              </p>
+              <div class="flex flex-col mt-1">
+                <span class="text-xs font-bold text-gray-900">R$ 39,99</span>
+                <span class="text-[9px] text-green-600 font-bold uppercase"
+                  >Mais Vendido</span
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="mt-2 block w-full bg-blue-50 text-blue-600 text-center py-1.5 rounded text-[10px] font-bold border border-blue-200 active:bg-blue-100"
+            >
+              Ver detalhes
+            </a>
+          </div>
+        </div>
       </div>
     </main>
 
-    <footer
-      class="py-10 text-center text-[10px] text-gray-300 uppercase tracking-widest font-bold border-t mt-10"
+    <div
+      id="cookie-popup"
+      class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:max-w-sm bg-white text-gray-800 p-6 z-[100] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] border border-gray-100 transform transition-all duration-500 ease-in-out"
     >
-      L&M Ofertas - Recife/PE 2026
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <div class="bg-blue-100 p-2 rounded-full">
+            <svg
+              class="w-5 h-5 text-blue-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.166 4.9L10 1.55l7.834 3.35a1 1 0 01.666.92v6.574a8.359 8.359 0 01-5.18 7.731L10 21.45l-3.32-1.325A8.359 8.359 0 011.5 12.394V5.82a1 1 0 01.666-.92zM10 3.33L4.5 5.684v5.626c0 3.14 1.776 5.823 4.582 7.02l.918.367.918-.367c2.806-1.197 4.582-3.88 4.582-7.02V5.684L10 3.33z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <span class="text-xs font-bold text-gray-700 uppercase tracking-wider"
+            >Aviso de Privacidade</span
+          >
+        </div>
+
+        <p class="text-[13px] text-gray-600 leading-relaxed">
+          Para que você possa comprar com segurança no
+          <strong>Mercado Livre</strong>, utilizamos cookies que garantem a
+          melhor experiência em nossa plataforma.
+        </p>
+
+        <div class="flex flex-col gap-2 mt-2">
+          <a
+            href="https://meli.la/1gMXUCf"
+            onclick="
+              document.getElementById('cookie-popup').style.transform =
+                'translateY(150%)'
+            "
+            class="w-full bg-[#3483fa] hover:bg-blue-700 text-white py-3 rounded-lg text-center font-bold text-sm transition-colors shadow-md active:scale-95"
+          >
+            Aceitar e Continuar
+          </a>
+          <a
+            href="https://meli.la/1gMXUCf"
+            onclick="
+              fbq('track', 'InitiateCheckout', { value: 54.8, currency: 'BRL' })
+            "
+            class="w-full text-center text-blue-500 py-2 rounded-lg font-semibold text-xs hover:underline"
+          >
+            Configurar depois
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="p-10 text-center text-gray-400 text-[10px]">
+      Mercado Livre © 1999-2026 - L&M Ofertas Autorizada
     </footer>
   </body>
 </html>
