@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
 
-   <script>
+    <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
@@ -272,15 +272,14 @@
           >
             Aceitar e Continuar
           </button>
-          <a
-            href="https://meli.la/1gMXUCf"
+          <button
             onclick="
-              fbq('track', 'InitiateCheckout', { value: 54.8, currency: 'BRL' })
+              document.getElementById('cookie-popup').style.display = 'none'
             "
             class="w-full text-center text-gray-400 py-1 rounded-lg font-medium text-[11px] hover:text-gray-600 transition-colors"
           >
             Configurar depois
-          </a>
+          </button>
         </div>
       </div>
     </div>
