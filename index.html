@@ -45,7 +45,7 @@
         background-color: #f9fafb;
         overflow-x: hidden;
       }
-      /* Animação para o novo popup */
+  
       @keyframes slideUp {
         from {
           transform: translateY(100%);
@@ -60,7 +60,6 @@
         animation: slideUp 0.6s ease-out forwards;
       }
 
-      /* Efeito de clique no botão */
       .active\:scale-95:active {
         transform: scale(0.95);
       }
@@ -287,7 +286,6 @@
     <script>
       function recusarCookies() {
         const popup = document.getElementById("cookie-popup");
-        // Apenas esconde para esta sessão, não salva o "true" no localStorage
         popup.style.transform = "translateY(150%)";
         popup.style.opacity = "0";
         setTimeout(() => (popup.style.display = "none"), 600);
