@@ -239,39 +239,66 @@
     <div
       id="cookie-popup"
       style="display: none"
-      class="fixed bottom-6 left-6 right-6 md:left-auto md:right-10 md:max-w-[320px] bg-white text-gray-800 p-6 z-[100] rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-50"
+      class="fixed bottom-6 left-6 right-6 md:left-auto md:right-10 md:max-w-[340px] bg-white text-gray-800 p-6 z-[100] rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-50"
     >
-      <h5 class="text-xs font-bold mb-2">Transparência de Dados</h5>
-      <p class="text-[11px] text-gray-500 leading-relaxed mb-4">
-        Usamos cookies apenas para garantir que a oferta chegue até você com
-        segurança.
-      </p>
-      <button
-        onclick="aceitarCookies()"
-        class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold text-xs"
-      >
-        Concordar
-      </button>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <div class="bg-blue-100 p-1.5 rounded-full">
+            <svg
+              class="w-4 h-4 text-blue-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.166 4.9L10 1.55l7.834 3.35a1 1 0 01.666.92v6.574a8.359 8.359 0 01-5.18 7.731L10 21.45l-3.32-1.325A8.359 8.359 0 011.5 12.394V5.82a1 1 0 01.666-.92zM10 3.33L4.5 5.684v5.626c0 3.14 1.776 5.823 4.582 7.02l.918.367.918-.367c2.806-1.197 4.582-3.88 4.582-7.02V5.684L10 3.33z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <h5 class="text-xs font-bold text-gray-700 uppercase tracking-wider">
+            Privacidade L&M
+          </h5>
+        </div>
+
+        <p class="text-[12px] text-gray-500 leading-relaxed">
+          Usamos tecnologias para garantir que sua oferta chegue com segurança.
+          Você aceita continuar?
+        </p>
+
+        <div class="flex flex-col gap-2 mt-2">
+          <button
+            onclick="aceitarCookies()"
+            class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold text-xs shadow-lg active:scale-95 transition-all"
+          >
+            Sim, aceito
+          </button>
+
+          <button
+            onclick="recusarCookies()"
+            class="w-full text-center text-gray-400 py-1 font-medium text-[10px] hover:text-gray-600 transition-colors"
+          >
+            Agora não, prefiro apenas navegar
+          </button>
+        </div>
+      </div>
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const jaAceitou = localStorage.getItem("cookiesL&M");
-        if (!jaAceitou) {
-          setTimeout(function () {
-            const popup = document.getElementById("cookie-popup");
-            if (popup) {
-              popup.style.display = "block";
-              popup.classList.add("animate-slide-up");
-            }
-          }, 5000);
-        }
-      });
+      function recusarCookies() {
+        const popup = document.getElementById("cookie-popup");
+        // Apenas esconde para esta sessão, não salva o "true" no localStorage
+        popup.style.transform = "translateY(150%)";
+        popup.style.opacity = "0";
+        setTimeout(() => (popup.style.display = "none"), 600);
+      }
 
       function aceitarCookies() {
         localStorage.setItem("cookiesL&M", "true");
         const popup = document.getElementById("cookie-popup");
-        popup.style.display = "none";
+        popup.style.transform = "translateY(150%)";
+        popup.style.opacity = "0";
+        setTimeout(() => (popup.style.display = "none"), 600);
       }
     </script>
   </body>
