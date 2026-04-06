@@ -1,94 +1,40 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>L&M Ofertas | Grupo VIP</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .bg-mesh {
-        background-color: #f8fafc;
-        background-image:
-          radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.12) 0, transparent 50%),
-          radial-gradient(
-            at 100% 100%,
-            rgba(59, 130, 246, 0.1) 0,
-            transparent 50%
-          );
-      }
-      @keyframes pulse-soft {
-        0%, 100% {
-          transform: scale(1);
-          box-shadow: 0 12px 45px rgba(37, 211, 102, 0.35);
-        }
-        50% {
-          transform: scale(1.03);
-          box-shadow: 0 12px 60px rgba(37, 211, 102, 0.5);
-        }
-      }
-      .animate-pulse-custom {
-        animation: pulse-soft 2s infinite;
-      }
+        :root { --green: #25D366; --dark: #1a1a1a; --gray: #666; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background: #f0f2f5; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+        .card { background: white; width: 100%; max-width: 400px; border-radius: 30px; padding: 40px 30px; text-center; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; }
+        .logo-text { font-size: 28px; font-weight: 900; color: var(--dark); margin-bottom: 10px; letter-spacing: -1px; }
+        .logo-text span { color: var(--green); }
+        .desc { color: var(--gray); font-size: 15px; line-height: 1.5; margin-bottom: 25px; }
+        .status-box { background: #f9f9f9; padding: 15px; border-radius: 20px; margin-bottom: 25px; border: 1px solid #f0f0f0; }
+        .status-box p { font-size: 13px; font-weight: 600; color: #444; }
+        .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: blink 1.5s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .btn { display: block; background: var(--green); color: white; text-decoration: none; font-size: 18px; font-weight: 800; padding: 18px; border-radius: 18px; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); transition: transform 0.2s; margin-top: 10px; }
+        .btn:active { transform: scale(0.96); }
+        .footer { font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-top: 30px; }
     </style>
-  </head>
-  <body class="bg-mesh min-h-screen flex items-center justify-center p-4">
-    <div
-      class="w-full max-w-md bg-white/90 backdrop-blur-md border border-white rounded-[2.5rem] shadow-2xl p-6 md:p-8 text-center"
-    >
-      <div class="relative inline-block mb-4">
-        <div
-          class="absolute -inset-1 bg-gradient-to-r from-green-400 to-teal-500 rounded-full blur opacity-30"
-        ></div>
-        <div class="relative bg-white p-1 rounded-full shadow-lg">
-            <img
-              src="./img/logoLM.png"
-              alt="logo L&M"
-              class="w-20 h-20 md:w-24 md:h-24 rounded-full object-contain mx-auto"
-            />
+</head>
+<body>
+    <div class="card">
+        <div class="logo-text">L&M <span>Ofertas</span></div>
+        <p class="desc">Receba achadinhos da Shopee e Mercado Livre com até <b>70% OFF</b> e Frete Grátis direto no seu celular.</p>
+        
+        <div class="status-box">
+            <div class="badge"><div class="dot"></div> Grupo Atualizado Hoje</div>
+            <p>Acesse cupons exclusivos que expiram em poucos minutos! ⚡</p>
         </div>
-      </div>
 
-      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-2">
-        L&M Ofertas <span class="text-green-500">💎</span>
-      </h1>
-      <p class="text-gray-500 text-sm mb-6 leading-relaxed px-2">
-        A curadoria nº 1 da Shopee e Mercado Livre. Economize até 
-        <span class="font-bold text-green-600">70% OFF</span> com cupons verificados todos os dias.
-      </p>
+        <a href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ" class="btn">ENTRAR NO GRUPO VIP</a>
 
-      <div class="bg-gray-50 rounded-3xl p-5 mb-6 border border-gray-100 shadow-sm">
-        <div
-          class="flex items-center justify-center gap-2 text-[10px] font-black text-green-600 uppercase tracking-[0.15em] mb-3"
-        >
-          <span class="flex h-2 w-2 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-          Vagas limitadas para hoje
-        </div>
-        <p class="text-gray-700 text-[13px] font-semibold leading-snug">
-          Participe agora para receber promoções exclusivas e cupons que expiram rápido! ⚡
-        </p>
-      </div>
-
-      <a
-        href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ?mode=gi_t"
-        class="animate-pulse-custom flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-lg md:text-xl font-extrabold py-5 rounded-2xl transition-all active:scale-95"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        QUERO AS OFERTAS
-      </a>
-
-      <p class="text-gray-400 text-[10px] uppercase tracking-widest mt-8 flex items-center justify-center gap-1">
-        <span>🔒</span> Ambiente 100% Seguro & Gratuito
-      </p>
+        <p class="footer">🔒 Ambiente 100% Seguro & Gratuito</p>
     </div>
-  </body>
+</body>
 </html>
