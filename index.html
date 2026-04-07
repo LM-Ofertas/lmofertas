@@ -3,24 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L&M Ofertas</title>
+    <title>L&M Ofertas | Redirecionando...</title>
     
-    <meta http-equiv="refresh" content="0; URL='https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ'">
+    <meta http-equiv="refresh" content="10; URL='https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ'">
 
     <style>
-        /* Tela totalmente limpa e branca */
-        body { 
-            background: #ffffff; 
-            margin: 0; 
-            padding: 0; 
-            overflow: hidden;
+        body { background: #f8fafc; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: -apple-system, system-ui, sans-serif; margin: 0; text-align: center; color: #334155; }
+        .container { padding: 20px; max-width: 350px; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #25D366; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* O botão começa escondido */
+        #fallback-btn { 
+            display: none; 
+            background: #25D366; 
+            color: white; 
+            text-decoration: none; 
+            padding: 15px 25px; 
+            border-radius: 12px; 
+            font-weight: bold; 
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            animation: fadeIn 0.5s ease-in;
         }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        h2 { font-size: 22px; margin-bottom: 10px; color: #1e293b; }
+        p { font-size: 15px; color: #64748b; }
     </style>
 </head>
 <body>
+
+    <div class="container">
+        <div class="loader" id="spinner"></div>
+        <h2>L&M Ofertas</h2>
+        <p id="status-text">Redirecionando para o WhatsApp...</p>
+        
+        <a href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ" id="fallback-btn">ENTRAR NO GRUPO AGORA</a>
+    </div>
+
     <script>
-        // Redirecionamento via JS (Instantâneo)
-        window.location.replace("https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ");
+        const link = "https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ";
+
+        // 1. Tenta o redirecionamento imediato
+        window.location.href = link;
+
+        // 2. Se passar 5 segundos e a página ainda estiver aberta:
+        setTimeout(() => {
+            document.getElementById('fallback-btn').style.display = 'inline-block';
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('status-text').innerHTML = "O redirecionamento falhou? <br> Clique no botão abaixo:";
+        }, 5000); // 5000ms = 5 segundos
     </script>
+
 </body>
 </html>
