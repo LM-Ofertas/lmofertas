@@ -2,30 +2,144 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>L&M Ofertas</title>
-    
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '576877975267309'); 
-      fbq('track', 'PageView');
-      fbq('track', 'Lead');
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&M Ofertas | Grupo VIP</title>
     <style>
-        body { background-color: #ffffff; margin: 0; }
+        :root {
+            --bg-color: #0d1b3e; /* Azul escuro profundo conforme o print */
+            --whatsapp-green: #25D366;
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .header-text {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .header-text span { color: #ff4d4d; } /* Cor para os emojis ou destaque */
+
+        .badge {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .sub-badge {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
+            object-fit: cover;
+        }
+
+        .btn-whatsapp {
+            display: block;
+            background-color: var(--whatsapp-green);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.95);
+        }
+
+        .footer-info {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f1c40f; /* Amarelo para destaque igual ao print */
+        }
+
+        .footer-info span {
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Animação suave */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 
-    <script>
-        window.location.replace("https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ");
-    </script>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '576877975267309');
+  fbq('track', 'PageView');
+</script>
+
 </head>
 <body>
+
+    <div class="container fade-in">
+        <div class="header-text">
+            🎯 AS MELHORES PROMOÇÕES E <br>
+            CUPONS DE ACHADINHOS DIRETO <br>
+            NO SEU CELULAR 🎯
+        </div>
+
+        <div class="badge">🚨 GRUPO VIP 🚨</div>
+        <div class="sub-badge">100% GRATUITO</div>
+
+        <img src="./img/logoLM.png" alt="L&M Ofertas" class="profile-img">
+
+        <a href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ" class="btn-whatsapp">
+            ENTRAR NO GRUPO DO WHATSAPP
+        </a>
+
+        <div class="footer-info">
+            ⚡ JÁ SOMOS +1.000 MEMBROS ⚡
+        </div>
+    </div>
+
 </body>
 </html>
