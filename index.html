@@ -1,145 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L&M Ofertas | Grupo VIP</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L&M Ofertas | Promoção Exclusiva</title>
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "576877975267309");
+      fbq("track", "PageView");
+    </script>
+
     <style>
-        :root {
-            --bg-color: #0d1b3e; /* Azul escuro profundo conforme o print */
-            --whatsapp-green: #25D366;
-            --text-white: #ffffff;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-white);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
+      body {
+        background-color: #0b1622;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        color: white;
+        padding: 20px;
+      }
 
-        .container {
-            width: 90%;
-            max-width: 400px;
-            padding: 20px;
-        }
+      .card {
+        width: 100%;
+        max-width: 400px;
+        background-color: #162435;
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        margin-top: 10px;
+      }
 
-        .header-text {
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-            line-height: 1.4;
-        }
+      .product-img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        border: 2px solid #1a2a3a;
+      }
 
-        .header-text span { color: #ff4d4d; } /* Cor para os emojis ou destaque */
+      .price-tag {
+        font-size: 1.8rem;
+        color: #2ecc71;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
 
-        .badge {
-            font-size: 26px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
+      .btn {
+        display: block;
+        text-decoration: none;
+        padding: 18px;
+        border-radius: 12px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        transition: transform 0.2s;
+      }
 
-        .sub-badge {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
+      .btn:active {
+        transform: scale(0.97);
+      }
 
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
-            object-fit: cover;
-        }
+      .btn-shopee {
+        background-color: #ee4d2d;
+        color: white;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
+      }
 
-        .btn-whatsapp {
-            display: block;
-            background-color: var(--whatsapp-green);
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: transform 0.2s;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
+      .divider {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        color: #666;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #333;
+        margin: 0 10px;
+      }
 
-        .btn-whatsapp:active {
-            transform: scale(0.95);
-        }
+      .btn-whats {
+        background-color: #25d366;
+        color: white;
+        font-size: 1rem;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+        animation: pulse 2s infinite;
+      }
 
-        .footer-info {
-            font-size: 16px;
-            font-weight: bold;
-            color: #f1c40f; /* Amarelo para destaque igual ao print */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
         }
+        70% {
+          transform: scale(1.02);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
 
-        .footer-info span {
-            display: block;
-            margin: 10px 0;
-        }
-
-        /* Animação suave */
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+      .social-proof {
+        font-size: 0.8rem;
+        color: #a0aec0;
+        margin-top: 15px;
+        font-weight: bold;
+      }
     </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="./img/carregador.png"
+        alt="Produto em Oferta"
+        class="product-img"
+      />
 
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '576877975267309');
-  fbq('track', 'PageView');
-</script>
+      <div class="price-tag">R$ 39,98</div>
 
-</head>
-<body>
+      <a
+        href="https://s.shopee.com.br/50V0LLSPKR"
+        class="btn btn-shopee"
+        onclick="fbq('track', 'Purchase')"
+      >
+        🛒 COMPRAR NA SHOPEE
+      </a>
 
-    <div class="container fade-in">
-        <div class="header-text">
-            🎯 AS MELHORES PROMOÇÕES E <br>
-            CUPONS DE ACHADINHOS DIRETO <br>
-            NO SEU CELULAR 🎯
-        </div>
+      <div class="divider">Ou aproveite no grupo</div>
 
-        <div class="badge">🚨 GRUPO VIP 🚨</div>
-        <div class="sub-badge">100% GRATUITO</div>
+      <a
+        href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ"
+        class="btn btn-whats"
+        onclick="fbq('track', 'Contact')"
+      >
+        ✅ ENTRAR NO GRUPO VIP
+      </a>
 
-        <img src="./img/logoLM.png" alt="L&M Ofertas" class="profile-img">
-
-        <a href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ" class="btn-whatsapp">
-            ENTRAR NO GRUPO DO WHATSAPP
-        </a>
-
-        <div class="footer-info">
-            ⚡ JÁ SOMOS +1.000 MEMBROS ⚡
-        </div>
+      <div class="social-proof">👤 JÁ SOMOS +1.000 MEMBROS NO GRUPO</div>
     </div>
-
-</body>
+  </body>
 </html>
