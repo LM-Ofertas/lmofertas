@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L&M Ofertas | Promoção Exclusiva</title>
+    <title>L&M Ofertas | Grupo VIP</title>
 
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -34,92 +34,155 @@
     </script>
 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      :root {
+        /* Paleta de Cores L&M Fixas e Profissionais */
+        --bg-dark: #0b1622; /* Azul Escuro Profundo (Marca) */
+        --accent-gold: #d4af37; /* Dourado (Destaque) */
+        --btn-green: #25d366; /* Verde WhatsApp (Conversão) */
+        --white: #ffffff;
       }
 
       body {
-        background-color: #0b1622;
-        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-dark);
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center; /* Centraliza verticalmente na tela toda */
         min-height: 100vh;
-        color: white;
-        padding: 20px;
+        color: var(--white);
+        overflow-x: hidden;
       }
 
-      .card {
-        width: 100%;
-        max-width: 400px;
-        background-color: #162435;
+      .container {
+        width: 90%;
+        max-width: 380px; /* Limite responsivo senior */
+        background: rgba(255, 255, 255, 0.03); /* Fundo sutil */
+        border: 1px solid rgba(212, 175, 55, 0.2); /* Borda dourada sutil */
         border-radius: 20px;
-        padding: 25px;
+        padding: 20px;
         text-align: center;
+        backdrop-filter: blur(10px);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        margin-top: 10px;
       }
 
-      .product-img {
-        width: 100%;
-        border-radius: 15px;
-        margin-bottom: 15px;
-        border: 2px solid #1a2a3a;
+      /* Correção da Logo: Redimensionada e Centralizada */
+      .logo {
+        width: 60px; /* Tamanho discreto e harmonico */
+        height: 60px;
+        background-color: var(--white);
+        border-radius: 50%;
+        margin: 0 auto 15px; /* Centraliza no card */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: 3px solid var(--accent-gold);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       }
 
-      .price-tag {
-        font-size: 1.8rem;
-        color: #2ecc71;
+      .logo img {
+        width: 80%;
+        height: auto;
+      }
+
+      .header-tag {
+        background-color: var(--accent-gold);
+        color: #000;
+        padding: 5px 10px;
         font-weight: bold;
+        font-size: 10px;
+        border-radius: 50px;
+        margin-bottom: 15px;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: var(--white);
+        font-weight: 600;
+      }
+      .subtitle {
+        font-size: 13px;
+        color: #a0aec0;
         margin-bottom: 20px;
       }
 
-      .btn {
-        display: block;
-        text-decoration: none;
-        padding: 18px;
-        border-radius: 12px;
+      .vagas-box {
+        background: #cc3333; /* Vermelho para urgência */
+        color: white;
+        padding: 6px;
+        border-radius: 6px;
+        font-size: 12px;
         font-weight: bold;
         margin-bottom: 15px;
-        transition: transform 0.2s;
-      }
-
-      .btn:active {
-        transform: scale(0.97);
-      }
-
-      .btn-shopee {
-        background-color: #ee4d2d;
-        color: white;
-        font-size: 1.1rem;
-        box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
-      }
-
-      .divider {
-        margin: 20px 0;
-        display: flex;
-        align-items: center;
-        color: #666;
-        font-size: 0.8rem;
         text-transform: uppercase;
       }
-      .divider::before,
-      .divider::after {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background: #333;
-        margin: 0 10px;
+
+      .btn-entrar {
+        background-color: var(--btn-green);
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 16px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        margin-bottom: 20px;
+        transition: 0.3s;
+        animation: pulse 2s infinite;
       }
 
-      .btn-whats {
-        background-color: #25d366;
-        color: white;
-        font-size: 1rem;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
-        animation: pulse 2s infinite;
+      .count-container {
+        margin-bottom: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 15px;
+      }
+
+      #vagas-count {
+        font-size: 48px;
+        font-weight: bold;
+        display: block;
+        color: var(--accent-gold);
+        line-height: 1;
+      }
+      .vagas-label {
+        font-size: 10px;
+        color: #718096;
+        letter-spacing: 1.5px;
+      }
+
+      .membros-label {
+        font-weight: bold;
+        font-size: 14px;
+        color: var(--accent-gold);
+        margin-top: 10px;
+      }
+
+      /* Notificação */
+      #notification {
+        position: fixed;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--white);
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        width: 80%;
+        max-width: 320px;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        border-left: 5px solid var(--btn-green);
+        font-size: 13px;
       }
 
       @keyframes pulse {
@@ -133,44 +196,79 @@
           transform: scale(1);
         }
       }
-
-      .social-proof {
-        font-size: 0.8rem;
-        color: #a0aec0;
-        margin-top: 15px;
-        font-weight: bold;
-      }
     </style>
   </head>
   <body>
-    <div class="card">
-      <img
-        src="./img/carregador.png"
-        alt="Produto em Oferta"
-        class="product-img"
-      />
+    <div class="container">
+      <div class="logo">
+        <img src="./img/logoLM.png" alt="L&M Ofertas" />
+      </div>
 
-      <div class="price-tag">R$ 39,98</div>
+      <div class="header-tag">Acesso VIP Disponível</div>
 
-      <a
-        href="https://s.shopee.com.br/50V0LLSPKR"
-        class="btn btn-shopee"
-        onclick="fbq('track', 'Purchase')"
-      >
-        🛒 COMPRAR NA SHOPEE
-      </a>
+      <h1>Grupo L&M Ofertas</h1>
+      <div class="subtitle">
+        Promoções exclusivas e cupons direto no seu celular.
+      </div>
 
-      <div class="divider">Ou aproveite no grupo</div>
+      <div class="vagas-box">⚠️ Vagas LIMITADAS!</div>
 
       <a
         href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ"
-        class="btn btn-whats"
+        class="btn-entrar"
         onclick="fbq('track', 'Contact')"
       >
-        ✅ ENTRAR NO GRUPO VIP
+        QUERO ENTRAR AGORA
       </a>
 
-      <div class="social-proof">👤 JÁ SOMOS +1.000 MEMBROS NO GRUPO</div>
+      <div class="count-container">
+        <span class="vagas-label">RESTAM APENAS</span>
+        <span id="vagas-count">21</span>
+        <span class="vagas-label">VAGAS DISPONÍVEIS</span>
+      </div>
+
+      <div class="membros-label">⭐️ JÁ SOMOS +1.000 MEMBROS</div>
     </div>
+
+    <div id="notification">✅ ALGUÉM ENTROU NO GRUPO</div>
+
+    <script>
+      // Lógica de Vagas (Diminui a cada 6s)
+      let count = 21;
+      const countElement = document.getElementById("vagas-count");
+      const updateVagas = setInterval(() => {
+        if (count > 5) {
+          count--;
+          countElement.innerText = count;
+        } else {
+          clearInterval(updateVagas);
+        }
+      }, 6000);
+
+      // Notificações Dinâmicas (Aparecem a cada 9s)
+      const nomes = [
+        "Ricardo",
+        "Fernanda",
+        "Gabriel",
+        "Juliana",
+        "Marcos",
+        "Patrícia",
+        "Higor",
+      ];
+      const notification = document.getElementById("notification");
+
+      function showNotification() {
+        const nome = nomes[Math.floor(Math.random() * nomes.length)];
+        notification.innerText = `✅ ${nome} acabou de entrar no grupo!`;
+        notification.style.bottom = "20px";
+        setTimeout(() => {
+          notification.style.bottom = "-100px";
+        }, 3000);
+      }
+
+      setTimeout(() => {
+        setInterval(showNotification, 9000);
+      }, 3500);
+    </script>
   </body>
 </html>
