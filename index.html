@@ -3,108 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verificação de Segurança | Site Oficial</title>
-    
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-18033485808"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "AW-18033485808");
-    </script>
-
+    <title>L&M Ofertas | Central de Achadinhos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
       body {
-        font-family: sans-serif;
-        background-color: #f4f7f6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
+        background-color: #0f172a;
       }
-      .box {
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        max-width: 350px;
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
-      .loader {
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #6200ea;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        animation: spin 1s linear infinite;
-        margin: 20px auto;
+      .shopee-gradient {
+        background: linear-gradient(135deg, #ee4d2d 0%, #ff7337 100%);
       }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
+      .logo-container {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .logo-container:hover {
+        transform: scale(1.08);
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
         }
-        100% {
-          transform: rotate(360deg);
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
-      h2 {
-        color: #333;
-        font-size: 18px;
-      }
-      p {
-        color: #666;
-        font-size: 14px;
-      }
-      .btn {
-        display: none;
-        background: #6200ea;
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        margin-top: 20px;
+      .animate-fade {
+        animation: slideUp 0.8s ease-out forwards;
       }
     </style>
   </head>
-  <body>
-    <div class="box">
-      <div id="loading">
-        <div class="loader"></div>
-        <h2>Verificando Site Oficial...</h2>
-        <p>
-          Aguarde um momento enquanto redirecionamos você para o ambiente seguro
-          do MounjaroCaps.
-        </p>
+  <body
+    class="text-slate-200 flex flex-col items-center justify-center min-h-screen p-6"
+  >
+    <div class="animate-fade text-center mb-10">
+      <div class="relative inline-block mb-4">
+        <div
+          class="absolute inset-0 bg-blue-500 rounded-full blur-3xl opacity-10"
+        ></div>
+
+        <div
+          class="w-24 h-24 glass-card rounded-3xl flex items-center justify-center relative border-blue-500/20 shadow-2xl shadow-blue-500/10 logo-container overflow-hidden"
+        >
+          <img
+            src="./img/L&M.png"
+            alt="Logo L&M Ofertas"
+            class="w-16 h-16 object-contain rounded-[32px]"
+          />
+        </div>
       </div>
 
-      <a
-        href="https://ev.braip.com/campanhas/cpa/camrmzzr5"
-        id="btn-link"
-        class="btn"
-        >ACESSAR SITE OFICIAL</a
-      >
+      <h1 class="text-3xl font-extrabold text-white tracking-tight">
+        L&M <span class="text-blue-500">Ofertas</span>
+      </h1>
+      <p class="text-slate-400 mt-2 text-sm font-medium">
+        Curadoria de Achadinhos e Preços de Atacado
+      </p>
     </div>
 
-    <script>
-      // Redirecionamento Automático após 3 segundos
-      setTimeout(function () {
-        window.location.href =
-          "https://ev.braip.com/campanhas/cpa/camrmzzr5";
-      }, 3000);
+    <div
+      class="w-full max-w-md space-y-5 animate-fade"
+      style="animation-delay: 0.2s"
+    >
+      <a
+        href="https://collshp.com/lmof.ertas?share_channel_code=1&view=storefront"
+        target="_blank"
+        class="shopee-gradient block w-full p-0.5 rounded-2xl shadow-2xl shadow-orange-500/20 active:scale-[0.98] transition-all group"
+      >
+        <div
+          class="bg-[#0f172a]/80 hover:bg-transparent transition-all rounded-[14px] p-5 flex items-center justify-between"
+        >
+          <div class="flex items-center">
+            <div
+              class="bg-white/10 p-3 rounded-xl mr-4 group-hover:bg-white/20 transition-colors"
+            >
+              <i class="fa-solid fa-bag-shopping text-xl text-white"></i>
+            </div>
+            <div>
+              <span
+                class="block text-[10px] font-black uppercase tracking-[0.2em] text-orange-400"
+                >Oficial</span
+              >
+              <span class="text-lg font-bold text-white"
+                >Vitrine de Achadinhos</span
+              >
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-up-right-from-square text-xs text-white/50 group-hover:text-white"
+          ></i>
+        </div>
+      </a>
 
-      // Se demorar muito, mostra o botão
-      setTimeout(function () {
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("btn-link").style.display = "block";
-      }, 5000);
-    </script>
+      <a
+        href="https://chat.whatsapp.com/DZSmBWszAzn3smdcN39AdJ"
+        target="_blank"
+        class="glass-card block w-full p-5 rounded-2xl hover:bg-white/5 border-green-500/20 active:scale-[0.98] transition-all group"
+      >
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <div
+              class="bg-green-500/20 p-3 rounded-xl mr-4 group-hover:bg-green-500/30 transition-colors"
+            >
+              <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
+            </div>
+            <div>
+              <span
+                class="block text-[10px] font-black uppercase tracking-[0.2em] text-green-400"
+                >Comunidade</span
+              >
+              <span class="text-lg font-bold text-white"
+                >Grupo VIP de Ofertas</span
+              >
+            </div>
+          </div>
+          <span
+            class="bg-green-500/10 text-green-400 text-[10px] font-bold px-3 py-1 rounded-full border border-green-500/20"
+            >ENTRAR</span
+          >
+        </div>
+      </a>
+    </div>
+
+    <footer
+      class="mt-16 animate-fade text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em]"
+      style="animation-delay: 0.4s"
+    >
+      &copy; 2026 L&M Dev Studio
+    </footer>
   </body>
 </html>
